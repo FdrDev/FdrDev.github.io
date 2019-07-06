@@ -16,3 +16,13 @@ body{
   width: 100%;
   background: black;
 }
+
+
+
+@media (max-width: 1080px) {
+
+  h3,h5{
+    font-size: 50px;
+  }
+
+}
