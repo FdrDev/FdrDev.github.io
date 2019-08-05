@@ -1,9 +1,7 @@
 body{
   font-family: 'Montserrat', sans-serif;
-
   background: url(img/texture.jpg);
   background-repeat: repeat;
-
 }
 
 #particles-js{
