@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>FdrDev</title>
     <!-- ADD ICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="imgs/nLogoIcon.png">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="imgs/nLogoIcon.png"> -->
     <!-- ADD MONTSERRAT FONT-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <!-- ADD FONTAWESOME -->
@@ -17,6 +17,10 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- ADD MY SCRIPT -->
     <script src="script.js" charset="utf-8"></script>
+    <!-- ADD PARTICLES.JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script> -->
   </head>
   <body>
       <header class="mt-3">
@@ -28,12 +32,22 @@
 
         </div>
       </header>
+      <div class="main-container position-relative">
 
-      <div class="mt-5 black-container">
-        <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
-          <h3 class="text-white">Pagina in costruzione</h3>
-          <h5 class="text-white">info su di me: <a class="text-white" href="https://www.linkedin.com/in/federicodente/"> Linkedin <i class="fab fa-linkedin text-white"></i></a> </h5>
+        <div id="particles-js"></div>
+        <script>
+        particlesJS.load('particles-js', 'particles.json', function(){
+          console.log('particles.json loaded...');
+        });
+        </script>
+
+        <div class="mt-5 black-container position-absolute">
+          <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
+            <h3 class="text-white">Pagina in costruzione</h3>
+            <h5 class="text-white">info su di me: <a class="text-white" href="https://www.linkedin.com/in/federicodente/"> Linkedin <i class="fab fa-linkedin text-white"></i></a> </h5>
+          </div>
         </div>
       </div>
+
   </body>
 </html>
