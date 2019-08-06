@@ -2,27 +2,35 @@ body{
   font-family: 'Montserrat', sans-serif;
   background: url(img/texture.jpg);
   background-repeat: repeat;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #particles-js{
-  height: 100vh;
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  top:0;
+  left: 0;
 }
+
 .longline{
   height: 2px;
   width: 100%;
   background: white;
 }
 
-.black-container{
-  height: 400px;
+.main-container{
+  height: 300px;
   width: 100%;
-  background: black;
-  position:absolute;
-  top:100px;
-  opacity: 0.7;
-  z-index: 100;
+  font-size: 70px;
+  font-family: 'Press Start 2P', cursive;
 }
 
+.about{
+  text-shadow: 1px 1px black;
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
 
 @media (max-width: 1080px) {
