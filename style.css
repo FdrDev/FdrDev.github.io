@@ -29,7 +29,7 @@ body{
 
 .about{
   text-shadow: 1px 1px black;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -38,5 +38,11 @@ body{
   h3,h5{
     font-size: 50px;
   }
+
+  .about{
+    font-size: 40px;
+  }
+
+
 
 }
