@@ -4,14 +4,17 @@ body{
   background-repeat: repeat;
   overflow-y: scroll;
   overflow-x: hidden;
+  color: white;
 }
 
 #particles-js{
   position: absolute;
-  height: 100%;
+  height: 180vh;
   width: 100vw;
   top:0;
   left: 0;
+  z-index: -10;
+  overflow: hidden;
 }
 
 .longline{
@@ -32,6 +35,78 @@ body{
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.skills li{
+  margin:20px 0;
+  list-style-type: none;
+}
+
+.bar{
+  background: #353b48;
+  display: block;
+  height: 5px;
+  border:1px solid rgba(255,255, 255, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #2187e7b3;
+}
+
+.bar span{
+  height: 4px;
+  float: left;
+  background: white;
+}
+
+.html{
+  width: 90%;
+  animation: html 2s;
+}
+.css{
+  width: 80%;
+  animation: html 2s;
+}
+.sass{
+  width: 73%;
+  animation: html 2s;
+}
+.bootstrap{
+  width: 80%;
+  animation: html 2s;
+}
+.javascript{
+  width: 65%;
+  animation: html 2s;
+}
+.jquery{
+  width: 60%;
+  animation: html 2s;
+}
+.php{
+  width: 70%;
+  animation: html 2s;
+}
+.laravel{
+  width: 60%;
+  animation: html 2s;
+}
+.wordpress{
+  width: 65%;
+  animation: html 2s;
+}
+.photoshop{
+  width: 85%;
+  animation: html 2s;
+}
+.premiere{
+  width: 80%;
+  animation: html 2s;
+}
+
+footer{
+  height: 200px;
+  background: black;
+  width: 100%;
+  line-height: 200px;
+}
 
 @media (max-width: 1080px) {
 
@@ -43,6 +118,9 @@ body{
     font-size: 40px;
   }
 
+  #typed{
+
+  }
 
 
 }
