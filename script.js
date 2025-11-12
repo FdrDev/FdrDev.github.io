@@ -1,14 +1,4 @@
 
-function typed() {
-  var typed = new Typed("#typed", {
-  strings: ["I'm Federico"],
-  smartBackspace: true,
-  typeSpeed:120,
-  backSpeed:50
-
-  });
-}
-
 function particles(){
   // Riduce il numero di particles su mobile
   var particleCount = 150;
