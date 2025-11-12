@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FdrDev</title>
     <!-- ADD ICON -->
     <!-- <link rel="shortcut icon" type="image/x-icon" href="imgs/nLogoIcon.png"> -->
@@ -9,88 +10,86 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <!-- ADD 8bit FONT -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- ADD IBM PLEX MONO FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
     <!-- ADD FONTAWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <!-- ADD BOOTSTRAP -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- ADD MY STYLE -->
     <link rel="stylesheet" href="style.css">
     <!-- ADD JQUERY -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- ADD MY SCRIPT -->
-    <script src="script.js" charset="utf-8"></script>
     <!-- ADD PARTICLES.JS -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <!-- ADD TYPED -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-  </head>
-  <body>
-    <header class="mt-3">
-      <div class="container">
+    <!-- ADD MY SCRIPT -->
+    <script src="script.js" charset="utf-8"></script>
+</head>
+<body>
+<header class="mt-3">
+    <div class="container">
 
-        <h1 class="text-white">FdrDev</h1>
-        <div class="longline"></div>
-        <h2 class="text-right text-white">Full Stack Developer Junior</h2>
-
-      </div>
-    </header>
-
-    <div id="particles-js"></div>
-
-    <div class="main-container position-relative text-white text-center container d-flex justify-content-center align-items-center">
-      <span id="typed"></span>
     </div>
- <!-- ############# ABOUT ###################### -->
-    <div class="about text-white d-flex mt-3">
-      <div class="container">
+</header>
 
-        <div class="row">
-          <div class="about-left col-12 col-lg3 text-center">
-            <h2>Su di me:</h2>
-          </div>
+<div id="particles-js"></div>
+
+<!-- ############# TERMINAL ###################### -->
+<div class="terminal-container container">
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+            <div class="terminal-title">fdrdev@portfolio:~</div>
         </div>
-        <div class="row">
-          <div class="about-right container col-12 col-lg-9">
-            <p>
-              Una semplice pagina di un <strong>FullStack Developer Junior</strong> che una volta iniziato a lavorare ha dimenticato di sistemarla.
-            </p>
-          </div>
+        <div class="terminal-body">
+            <div class="terminal-content" id="terminal-content">
+                <div class="line mt-3"><span class="prompt">~</span> <span class="cmd">whoami</span></div>
+                <div class="output">Federico - Full Stack Developer</div>
+
+                <div class="line"><span class="prompt">~</span> <span class="cmd">cat /dev/skills</span></div>
+                <div class="output category-title">━━━ Frontend ━━━</div>
+                <div class="output">HTML5 • CSS3 • JavaScript • TypeScript • Next.js</div>
+
+                <div class="output category-title">━━━ Backend ━━━</div>
+                <div class="output">PHP • Laravel • Symfony • Nest.js • Express.js • Node.js</div>
+
+                <div class="output category-title">━━━ Database ━━━</div>
+                <div class="output">MySQL • PostgreSQL • MongoDB</div>
+
+                <div class="output category-title">━━━ DevOps & Tools ━━━</div>
+                <div class="output">Docker • Git • K8s</div>
+
+                <div class="output category-title">━━━ Environment ━━━</div>
+                <div class="output">Linux • MacOS</div>
+
+                <div class="line"><span class="prompt">~</span> <span class="cmd">cat /dev/portfolio</span></div>
+                <div class="output"><a href="https://asdalma.it" target="_blank" rel="noopener noreferrer">asdalma.it</a> • <a href="https://danilogaias.it" target="_blank" rel="noopener noreferrer">danilogaias.it</a></div>
+
+                <div class="line"><span class="prompt">~</span> <span class="cmd">cat /dev/contacts</span></div>
+                <div class="output category-title">━━━ Contatti ━━━</div>
+                <div class="output">
+                    <a href="tel:+393421944260"><i class="fas fa-phone"></i> +39 342 19 44 260</a><br>
+                    <a href="https://wa.me/393421944260" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a><br>
+                    <a href="mailto:federicod.dev@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i> federicod.dev@gmail.com</a><br>
+                    <a href="https://www.linkedin.com/in/federicodente/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+                    <a href="https://github.com/FdrDev" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+
+                <div class="line"><span class="prompt">~</span> _</div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- ############# END ABOUT ###################### -->
+</div>
+<!-- ############# END TERMINAL ###################### -->
 
-    <!-- ############# SKILLS ###################### -->
-
-    <div class="skills container mt-5">
-      <h2 class="text-center">Skills</h2>
-      <ul class="text-right">
-        <li><h3>HTML</h3><span class="bar"><span class="html"></span></span></li>
-        <li><h3>CSS</h3><span class="bar"><span class="css"></span></span></li>
-        <li><h3>SASS</h3><span class="bar"><span class="sass"></span></span></li>
-        <li><h3>BOOTSTRAP</h3><span class="bar"><span class="bootstrap"></span></span></li>
-        <li><h3>JAVASCRIPT</h3><span class="bar"><span class="javascript"></span></span></li>
-        <li><h3>JQUERY</h3><span class="bar"><span class="jquery"></span></span></li>
-        <li><h3>PHP</h3><span class="bar"><span class="php"></span></span></li>
-        <li><h3>LARAVEL</h3><span class="bar"><span class="laravel"></span></span></li>
-        <li><h3>WORDPRESS</h3><span class="bar"><span class="wordpress"></span></span></li>
-        <li><h3>PHOTOSHOP</h3><span class="bar"><span class="photoshop"></span></span></li>
-        <li><h3>PREMIERE PRO</h3><span class="bar"><span class="premiere"></span></span></li>
-
-
-
-      </ul>
-
-
-
-    </div>
-    <!-- ############# END SKILLS ###################### -->
-    <footer>
-      <div class="text-center">
-
-        Pagina in costruzione -
-        info su di me -> <a href="https://www.linkedin.com/in/federicodente/"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </footer>
-  </body>
+<footer>
+</footer>
+</body>
 </html>

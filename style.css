@@ -5,15 +5,18 @@ body{
   overflow-y: scroll;
   overflow-x: hidden;
   color: white;
+  min-height: 100vh;
+  padding: 0 0 80px 0;
+  margin: 0;
 }
 
 html,body{
-  height: 100%;
+  min-height: 100%;
 }
 
 #particles-js{
   position: absolute;
-  height: 165vh;;
+  height: 100%;
   width: 100vw;
   top:0;
   left: 0;
@@ -105,14 +108,250 @@ html,body{
   animation: html 2s;
 }
 
-footer{
-  height: 200px;
-  background: black;
+/* ############# TERMINAL ###################### */
+.terminal-container {
+  max-width: 1000px;
   width: 100%;
-  line-height: 200px;
+  margin: 0 auto 60px auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-footer i{
-  font-size: 50px;
+
+.terminal {
+  background: rgba(29, 32, 33, 0.5) !important;
+  border-radius: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  font-family: 'IBM Plex Mono', monospace;
+  border: 1px solid rgba(60, 56, 54, 0.6);
+  position: relative;
+  z-index: 1;
+}
+
+.terminal-header {
+  background: rgba(40, 40, 40, 0.6) !important;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(60, 56, 54, 0.6);
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-buttons span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.btn-close {
+  background: #cc241d;
+}
+
+.btn-minimize {
+  background: #d79921;
+}
+
+.btn-maximize {
+  background: #98971a;
+}
+
+.terminal-title {
+  flex: 1;
+  text-align: center;
+  color: #ebdbb2;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.terminal-body {
+  padding: 20px;
+  background: rgba(29, 32, 33, 0.5) !important;
+  min-height: 500px;
+  color: #ebdbb2;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.terminal-content {
+  margin-bottom: 15px;
+  overflow-y: visible;
+}
+
+.terminal-content .line {
+  margin: 8px 0;
+  color: #ebdbb2;
+  font-weight: 400;
+}
+
+.terminal-content .line.mt-3 {
+  margin-top: 20px;
+}
+
+.terminal-content .output {
+  margin: 3px 0 20px 20px;
+  color: #d5c4a1;
+  font-weight: 400;
+}
+
+.terminal-content .output.category-title {
+  color: #8ec07c;
+  font-weight: 600;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.terminal-content .prompt {
+  color: #83a598;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.terminal-content .cmd {
+  color: #fabd2f;
+  font-weight: 700;
+}
+
+.terminal-content a {
+  color: #83a598;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.terminal-content a:hover {
+  color: #b8bb26;
+  text-decoration: underline;
+}
+
+.terminal-content a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.terminal-content .output a {
+  display: inline-block;
+  margin: 5px 0;
+}
+
+/* Scrollbar per il terminale - stile minimal */
+.terminal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-content::-webkit-scrollbar-track {
+  background: #282828;
+}
+
+.terminal-content::-webkit-scrollbar-thumb {
+  background: #504945;
+  border-radius: 0;
+}
+
+.terminal-content::-webkit-scrollbar-thumb:hover {
+  background: #665c54;
+}
+
+/* ############# END TERMINAL ###################### */
+
+/* Media queries per mobile - font più grande */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 50px;
+  }
+
+  .terminal-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  .terminal-body {
+    font-size: 20px !important;
+    padding: 15px;
+    line-height: 1.9;
+  }
+
+  .terminal-content .output.category-title {
+    font-size: 19px !important;
+  }
+
+  .terminal-title {
+    font-size: 15px;
+  }
+
+  .main-container{
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-bottom: 30px;
+  }
+
+  .terminal-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .terminal-body {
+    font-size: 18px !important;
+    padding: 15px;
+    line-height: 1.8;
+  }
+
+  .terminal-content .output.category-title {
+    font-size: 17px !important;
+    font-weight: 700;
+  }
+
+  .terminal-content .prompt {
+    font-size: 18px !important;
+  }
+
+  .terminal-content .cmd {
+    font-size: 18px !important;
+  }
+
+  .terminal-title {
+    font-size: 14px;
+  }
+
+  .terminal-header {
+    padding: 10px 15px;
+  }
+
+  .terminal-buttons span {
+    width: 12px;
+    height: 12px;
+  }
+
+  .main-container{
+    font-size: 28px;
+  }
+
+  .terminal-content .output {
+    margin: 5px 0 18px 15px;
+  }
+
+  .terminal-content .line {
+    margin: 10px 0;
+  }
 }
 
 @media (max-width: 1080px) {
