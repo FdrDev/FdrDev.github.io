@@ -132,10 +132,48 @@ var terminalCommands = [
 var currentCommandIndex = 0;
 var typedInstance = null;
 
+function animateOutput(outputHtml, callback) {
+  // Crea un contenitore temporaneo per parsare l'HTML
+  var $temp = $('<div>').html(outputHtml);
+  var $elements = $temp.children();
+
+  if ($elements.length === 0) {
+    // Se non ci sono elementi figli, aggiungi direttamente
+    $('#terminal-content').append(outputHtml);
+    if (callback) callback();
+    return;
+  }
+
+  var index = 0;
+
+  function addNextElement() {
+    if (index >= $elements.length) {
+      if (callback) callback();
+      return;
+    }
+
+    var $el = $($elements[index]);
+    $el.addClass('animated');
+    $('#terminal-content').append($el);
+
+    // Scroll automatico
+    var terminalBody = $('.terminal-body')[0];
+    if (terminalBody) {
+      terminalBody.scrollTop = terminalBody.scrollHeight;
+    }
+
+    index++;
+    setTimeout(addNextElement, 150); // Delay tra ogni riga
+  }
+
+  addNextElement();
+}
+
 function typeNextCommand() {
   if (currentCommandIndex >= terminalCommands.length) {
     // Tutti i comandi completati, mostra cursore finale
-    $('#terminal-content').append('<div class="line"><span class="prompt">~</span> _</div>');
+    var $finalLine = $('<div class="line"><span class="prompt">~</span> _</div>');
+    $('#terminal-content').append($finalLine);
     $('.terminal-input-line').hide();
     return;
   }
@@ -168,13 +206,9 @@ function typeNextCommand() {
         // Nascondi la linea di input
         $('.terminal-input-line').hide();
 
-        // Aggiungi il comando completato al contenuto
-        $('#terminal-content').append(
-          '<div class="line"><span class="prompt">~</span> <span class="cmd">' + cmd.command + '</span></div>'
-        );
-
-        // Aggiungi l'output
-        $('#terminal-content').append(cmd.output);
+        // Aggiungi il comando completato al contenuto SENZA animazione
+        var $commandLine = $('<div class="line"><span class="prompt">~</span> <span class="cmd">' + cmd.command + '</span></div>');
+        $('#terminal-content').append($commandLine);
 
         // Scroll automatico
         var terminalBody = $('.terminal-body')[0];
@@ -182,18 +216,24 @@ function typeNextCommand() {
           terminalBody.scrollTop = terminalBody.scrollHeight;
         }
 
-        // Distruggi l'istanza di Typed
-        if (typedInstance) {
-          typedInstance.destroy();
-          typedInstance = null;
-        }
-
-        // Passa al prossimo comando
-        currentCommandIndex++;
-
+        // Aspetta un po' prima di mostrare l'output
         setTimeout(function() {
-          typeNextCommand();
-        }, 500);
+          // Aggiungi l'output CON animazione graduale
+          animateOutput(cmd.output, function() {
+            // Output completato, distruggi l'istanza di Typed
+            if (typedInstance) {
+              typedInstance.destroy();
+              typedInstance = null;
+            }
+
+            // Passa al prossimo comando
+            currentCommandIndex++;
+
+            setTimeout(function() {
+              typeNextCommand();
+            }, 500);
+          });
+        }, 200);
 
       }, 300);
     }
