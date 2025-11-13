@@ -241,6 +241,28 @@ html,body{
   margin: 5px 0;
 }
 
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.cursor-blink {
+  color: #83a598;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+#typed-command {
+  color: #fabd2f;
+  font-weight: 700;
+}
+
 /* Scrollbar per il terminale - stile minimal */
 .terminal-content::-webkit-scrollbar {
   width: 8px;
