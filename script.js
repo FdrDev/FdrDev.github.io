@@ -91,7 +91,6 @@ function particles(){
 
 
 function init(){
-  // typed();
   particles();
 }
 
