@@ -131,7 +131,7 @@ html,body{
 }
 
 .terminal-header {
-  background: rgba(40, 40, 40, 0.6) !important;
+  background: rgba(40, 40, 40, 1) !important;
   padding: 8px 15px;
   display: flex;
   align-items: center;
@@ -173,7 +173,7 @@ html,body{
 
 .terminal-body {
   padding: 20px;
-  background: rgba(29, 32, 33, 0.5) !important;
+  background: rgba(29, 32, 33, 0.7) !important;
   min-height: 500px;
   color: #ebdbb2;
   font-size: 16px;
