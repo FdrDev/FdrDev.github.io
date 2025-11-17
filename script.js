@@ -89,23 +89,40 @@ function particles(){
   });
 }
 
+const user = 'federicod.dev';
+const domain = 'gmail.com';
+const mail = `mailto:${user}+portfolio@${domain}`;
+
 // Dati dei comandi e risposte del terminale
 var terminalCommands = [
   {
     command: "whoami",
     output: '<div class="output">Federico - Full Stack Developer</div>'
   },
+    {
+        command: "cat /dev/contacts",
+        output: `
+      <div class="output category-title">━━━ Contatti ━━━</div>
+      <div class="output">
+        <a href="tel:+393421944260"><i class="fas fa-phone"></i> +39 342 19 44 260</a><br>
+        <a href="https://wa.me/3421944260" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a><br>
+        <a href="${mail}" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i> Contatta via mail</a><br>
+        <a href="https://www.linkedin.com/in/federicodente/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+        <a href="https://github.com/FdrDev" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    `
+    },
   {
     command: "cat /dev/skills",
     output: `
       <div class="output category-title">━━━ Frontend ━━━</div>
-      <div class="output">HTML5 • CSS3 • JavaScript • TypeScript • Next.js</div>
+      <div class="output">HTML5 • CSS3 • JavaScript • TypeScript • React • Next.js</div>
       <div class="output category-title">━━━ Backend ━━━</div>
-      <div class="output">PHP • Laravel • Symfony • Nest.js • Express.js • Node.js</div>
+      <div class="output">PHP • Laravel • Symfony • Nest.js • Node.js</div>
       <div class="output category-title">━━━ Database ━━━</div>
       <div class="output">MySQL • PostgreSQL • MongoDB</div>
       <div class="output category-title">━━━ DevOps & Tools ━━━</div>
-      <div class="output">Docker • Git • K8s</div>
+      <div class="output">Docker • Git • K8s • CI/CD (GH - BitBucket - Gitlab) </div>
       <div class="output category-title">━━━ Environment ━━━</div>
       <div class="output">Linux • MacOS</div>
     `
@@ -114,19 +131,6 @@ var terminalCommands = [
     command: "cat /dev/portfolio",
     output: '<div class="output"><a href="https://asdalma.it" target="_blank" rel="noopener noreferrer">asdalma.it</a> • <a href="https://danilogaias.it" target="_blank" rel="noopener noreferrer">danilogaias.it</a></div>'
   },
-  {
-    command: "cat /dev/contacts",
-    output: `
-      <div class="output category-title">━━━ Contatti ━━━</div>
-      <div class="output">
-        <a href="tel:+393421944260"><i class="fas fa-phone"></i> +39 342 19 44 260</a><br>
-        <a href="https://wa.me/393421944260" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a><br>
-        <a href="mailto:federicod.dev@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i> federicod.dev@gmail.com</a><br>
-        <a href="https://www.linkedin.com/in/federicodente/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
-        <a href="https://github.com/FdrDev" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-      </div>
-    `
-  }
 ];
 
 var currentCommandIndex = 0;
